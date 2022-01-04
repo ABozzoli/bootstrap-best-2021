@@ -9,11 +9,29 @@
 </head>
 
 <body>
-	<h1 th:text="|Best of 2021 by ${name}|"></h1>
-	<ul>
-		<li><a th:href="@{/movies}" class="btn btn-primary">Movies</a></li>
-		<li><a th:href="@{/songs}" class="btn btn-primary">Songs</a></li>
-	</ul>
+
+	<ul class="nav nav-tabs justify-content-center m-2">
+		<li class="nav-item">
+			<a class="nav-link active" aria-current="page" th:href="@{/}">Best of 2021</a>
+		</li>
+		<li class="nav-item mx-2">
+			<a th:href="@{/movies}" class="btn btn-primary">Movies</a>
+		</li>
+		<li class="nav-item">
+			<a th:href="@{/songs}" class="btn btn-primary">Songs</a>
+		</li>
+	</ul>	
+
+	<div class="row justify-content-center">
+		<div class="card m-5 p-2" style="width: 30rem;">
+			<h4 class="text-center" th:text="|Best of 2021 by ${name}|"></h4>
+			<img th:src="@{/img/sparkle_sticks.jpg}" class="card-img-top" alt="fireworks">
+			<div class="card-body">
+				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+	</div>
+
 	
 	<!-- scripts -->
 	<div th:replace="fragments :: scripts"></div>
