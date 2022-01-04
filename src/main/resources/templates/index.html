@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- needed -->
+	<div th:replace="fragments :: head"></div>
+    
+	<title>Best of 2021</title>
+</head>
+
+<body>
+	<h1 th:text="|Best of 2021 by ${name}|"></h1>
+	<ul>
+		<li><a th:href="@{/movies}" class="btn btn-primary">Movies</a></li>
+		<li><a th:href="@{/songs}" class="btn btn-primary">Songs</a></li>
+	</ul>
+	
+	<!-- scripts -->
+	<div th:replace="fragments :: scripts"></div>
+</body>
+
+</html>
