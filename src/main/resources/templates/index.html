@@ -2,25 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<!-- needed -->
+	<!-- head -->
 	<div th:replace="fragments :: head"></div>
     
 	<title>Best of 2021</title>
 </head>
 
 <body>
-
-	<ul class="nav nav-tabs justify-content-center m-2">
-		<li class="nav-item">
-			<a class="nav-link active" aria-current="page" th:href="@{/}">Best of 2021</a>
-		</li>
-		<li class="nav-item mx-2">
-			<a th:href="@{/movies}" class="btn btn-primary">Movies</a>
-		</li>
-		<li class="nav-item">
-			<a th:href="@{/songs}" class="btn btn-primary">Songs</a>
-		</li>
-	</ul>	
+	<!-- navbar -->
+	<navbar th:replace="fragments :: navbar"></navbar>
 
 	<div class="row justify-content-center">
 		<div class="card m-5 p-2" style="width: 30rem;">
@@ -31,7 +21,6 @@
 			</div>
 		</div>
 	</div>
-
 	
 	<!-- scripts -->
 	<div th:replace="fragments :: scripts"></div>
